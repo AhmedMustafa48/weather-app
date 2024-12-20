@@ -34,5 +34,20 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const apiKey = "fd986831d19f103df39a7fd4e4bdd535";
+      const apiUrl =
+        "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=lahore";
+
+      async function checkWeather() {
+        const response = await fetch(apiUrl + `&appid=${apiKey}`);
+        var data = await response.json();
+
+        console.log(data);
+      }
+
+      checkWeather();
+    </script>
   </body>
 </html>
